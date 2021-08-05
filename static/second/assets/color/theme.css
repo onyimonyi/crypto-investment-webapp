@@ -1,0 +1,77 @@
+/*!
+Template :	CryptoCoin @by Softnio
+Preset   :	Default
+Version	 :	1.0.1
+Updated	 :	01.29.2018
+*/
+.pageloader i,
+header .navbar.bootsnav ul.nav.navbar-nav li a:hover,
+header .navbar.bootsnav ul.nav.navbar-nav li.active a,
+header .navbar.bootsnav.white .attr-nav > ul > li > a:hover,
+.btn-primary:hover,
+.btn-primary.active.focus, 
+.btn-primary.active:focus, 
+.btn-primary.active:hover, 
+.btn-primary:active:focus, 
+.btn-primary:active:hover,
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary.focus:active, 
+.btn-primary:focus,
+.btn-default:hover,
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active:focus, 
+.btn-default:active:hover,
+.btn-default.active,
+.btn-default:active,
+.btn-default.focus:active, 
+.btn-default:focus,
+.team_social a:hover,
+.content_blog h4 a:hover,
+.content_blog a,
+button:hover,
+.social_footer a:hover,
+.get_start_box:hover i,
+.site_info a:hover,
+.team_box:hover h3 a  {
+	color:#ff880e;
+}
+.btn-default,
+.home_slider .owl-nav i:hover,
+.price_rate,
+.service_box::before,
+.bg_color2,
+.owl-dot.active > span,
+button,
+.scrollup:hover {
+	background-color: #ff880e;
+}
+.pageloader i,
+.loader_wrap::before, 
+.loader_wrap::after,
+.btn-default:hover,
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active:focus, 
+.btn-default:active:hover,
+.btn-default.active,
+.btn-default:active,
+.btn-default.focus:active, 
+.btn-default:focus,
+button,
+button:hover,
+.partner_logo img:hover {
+	border-color: #ff880e;
+}
+body .price-item-live .btcwdgt-text-ticker .btcwdgt-edge,
+body .btcwdgt-chart .btcwdgt-header h2,
+body .btcwdgt-chart .btcwdgt-header {
+    background-color: #ff880e !important;
+}
+body .btcwdgt-chart .btcwdgt-header h4,
+body .btcwdgt-chart .btcwdgt-header .stats div {
+	color: rgba(255,255,255,0.8) !important;
+}

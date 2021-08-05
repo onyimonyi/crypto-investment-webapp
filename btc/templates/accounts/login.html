@@ -1,0 +1,72 @@
+{% extends 'accountbase.html' %}
+
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+
+<!-- Start Slider Area -->
+<div class="login-area area-padding fix">
+    <div class="login-overlay"></div>
+    <div class="table">
+        <div class="table-cell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+                        <div class="login-form">
+                            <h4 class="login-title text-center">LOGIN</h4>
+                            <div class="row">
+                                <form id="contactForm" class="log-form" action="{% url 'btc:login' %}" method="POST">{% csrf_token %}
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        {{ form.email }}
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        {{ form.password }}
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                        <div class="check-group flexbox">
+                                            <label class="check-box">
+                                                <input type="checkbox" class="check-box-input" checked>
+                                                <span class="remember-text">Remember me</span>
+                                            </label>
+
+                                            <a class="text-muted" href="#">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                        <button type="submit" id="submit" class="slide-btn login-btn">Login</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                        <div class="clear"></div>
+                                        <div class="separetor text-center"><span>Or with Sign</span></div>
+                                        <div class="sign-icon">
+                                            <ul>
+                                                <li><a class="facebook" href="#"><i class="ti-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="ti-twitter"></i></a></li>
+                                                <li><a class="google" href="#"><i class="ti-google"></i></a></li>
+                                            </ul>
+                                            <div class="acc-not">Don't have an account? <a
+                                                    href="{% url 'btc:register'%}">Sign up</a></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Slider Area -->
+</body>
+
+{% endblock %}

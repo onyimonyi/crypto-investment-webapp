@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include "side-bar.html" %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header " style="color: 	#bf00ff">
+        <h1>
+            assets
+            <small style="color: 	#bf00ff">click on the asset on your choice to invest, also see the % profit</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+            {% for item in item %}
+            <a href="{{ item.get_absolute_url }}">
+                <div class="col-lg-3 col-xs-6">
+                    <div class="info-box ">
+                         <span class="direct-chat-timestamp pull-left"> <img
+                            class="direct-chat-img" src="{{item.picture.url}}">
+                        <!-- /.direct-chat-img -->
+                           </span>
+
+                        <b>
+                            <div class="info-box-content">
+                                <span class="info-box-text" style="color: 	#B8860B">{{ item.name }}</span>
+                                <span class="info-box-number" style="color: violet">41,410</span>
+
+
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 70%"></div>
+                                </div>
+                                <span class="progress-description" style="color: violet">
+                    {{ item.percentage }} % profit daily
+                  </span>
+                            </div>
+                        </b>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="pagination justify-content-center">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo;  first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+        </div>
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}

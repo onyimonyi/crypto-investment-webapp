@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="wrapper">
+    {% include "side-bar.html" %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header" style="color: 4B0082;">
+            <h1>
+                We build
+                <small style="color: 4B0082;">Best investment company</small>
+            </h1>
+                {% include "messages.html" %}
+        </section>
+
+        <!-- Main content -->
+        <div class=" card-body">
+
+            <section class="content">
+                <!-- Info boxes -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- Widget: user widget style 1 -->
+                        <div class="box box-widget widget-user">
+                            <!-- Add the bg color to the header using any of the bg-* classes -->
+                            <div class="widget-user-header bg-aqua-active">
+                                <h3 class="widget-user-username">{{user.full_name }}</h3>
+                            </div>
+                            <div class="widget-user-image">
+                                <img class="img-circle" src="{% static 'dist/img/avater.png' %}"
+                                     alt="User Avatar">
+                            </div>
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col border-right">
+                                        <div class="description-block">
+                                            <h4 class="description-header" style="font-size:20px;color:gold"><i
+                                                    class="fa fa-dollar"
+                                                    style="font-size:18px;color:gold"></i>{{ user_bal.balance }}</h4>
+
+                                            <b class="description-text bold"
+                                               style="font-size:20px;color:#5c123c">Account bal</b>
+                                        </div>
+                                        <!-- /.description-block -->
+                                    </div>
+
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    <div class="col-md-4">
+                        <div class="box box-default box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Running investments</h3>
+
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                            class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            {% for investment in investments %}
+                            <div class="box-body">
+                                {% if investment %}
+                                <div class="box box-default">
+                                    <div class="box-body text-center" style="">
+                            <span class="info-box-text"
+                                  style="font-size:10px;color:#36125c">you invested {{ investment.invest_amount }}  on  {{ investment.assets }}</span>
+                                        <span class="info-box-number" style="font-size:15px;color:gold"><i
+                                                class="fa fa-dollar"
+                                                style="font-size:15px;color:gold"></i>{{ investment.get_profit }}</span>
+                                    </div>
+                                    {% endif %}
+
+                                </div>
+                                {% empty %}
+                                    <h5 class="text-center text-danger">no active investment at the moment</h5>
+
+                                {% endfor %}
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box box-success box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">pending withdrawals</h3>
+
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                            class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.box-tools -->
+                            </div>
+                            <!-- /.box-header -->
+                            {% for item in withdrawal %}
+                            <div class="box-body">
+                                {% if item %}
+                                <div class="box box-default">
+
+                                    <div class="box-body text-center">
+                                        <button type="button" class="btn btn-info text-center " data-toggle="modal"
+                                                data-target="#modal-success">
+                                            ${{item.get_withdrawal_status}}
+                                        </button>
+                                        {% endif %}
+                                    </div>
+
+                                    {% empty %}
+
+                                    <div class="box with-border box-info">
+                                        <h5 class="box-title text-danger text-center">No Pending withdrawals</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+{% endblock %}

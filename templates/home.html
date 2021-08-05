@@ -1,0 +1,1044 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body data-spy="scroll" data-offset="110">
+
+
+
+<!-- LOADER -->
+<div class="pageloader">
+    <div class="loader_wrap">
+        <i class="fa fa-bitcoin"></i>
+    </div>
+</div>
+<!-- END LOADER -->
+
+<!-- START HEADER -->
+<header class="navbar">
+    <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+        <!-- Start Top Search -->
+        <div class="top-search">
+            <div class="container"><!-- STRART CONTAINER -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                </div>
+            </div><!-- END CONTAINER-->
+        </div>
+        <!-- End Top Search -->
+        <div class="container"><!-- STRART CONTAINER -->
+            <!-- Start Atribute Navigation -->
+            <div class="attr-nav">
+                <ul>
+                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li class="user"><a href="{% url 'btc:login'%}"><i class="fa fa-user">login</i></a></li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#home">
+                    <img src="{% static 'assets/images/logo.png' %}" class="logo logo-display" alt="logo">
+                    <img src="{% static 'assets/images/logo_black.png' %}" class="logo logo-scrolled" alt="logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li><a class="page-scroll" href="#home">Home</a></li>
+                    <li><a class="page-scroll" href="#about">About Us</a></li>
+                    <li><a class="page-scroll" href="#whychoose">Why Choose</a></li>
+                    <li><a class="page-scroll" href="#team">Team</a></li>
+                    <li><a class="page-scroll" href="#blog">Blog</a></li>
+                    <li><a class="page-scroll" href="#footer">Contact Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- END CONTAINER-->
+    </nav>
+</header>
+<!-- END HEADER -->
+<!-- START SECTION BANNER -->
+<section id="home" class="banner_section no-padding overlay background_bg"
+         style="background-image:url({% static 'assets/images/banner_1.jpg' %}); height: 629px;">
+    <canvas id="circle-canvas"></canvas>
+    <div class="banner_content_wrap home_slider owl-carousel">
+        <div class="item active">
+            <div class="container"><!-- STRART CONTAINER -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
+                        <div class="banner_content">
+                            <h2>BitCurrency is the way to <br>the future, you are ready!</h2>
+                            <p>ICO Crypto Template, an ICO Landing page template that will<br> best for ICO Startup
+                                Agency.</p>
+                            <div class="slider_btn">
+                                <a href="#about" class="btn btn-primary page-scroll">Read More</a>
+                                <a href="#footer" class="btn btn-default page-scroll">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END CONTAINER-->
+        </div>
+        <div class="item">
+            <div class="container"><!-- STRART CONTAINER -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="banner_content">
+                            <h2>ICO Landing page for your <br> cryptocurrency project</h2>
+                            <p>We are proud to introduce ICO Crypto Template, an ICO Landing page template that will<br>
+                                best for ICO Startup Agency. Know our advantage.</p>
+                            <div class="slider_btn">
+                                <a href="#about" class="btn btn-primary page-scroll">Read More</a>
+                                <a href="#footer" class="btn btn-default page-scroll">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END CONTAINER-->
+        </div>
+        <div class="item">
+            <div class="container"><!-- STRART CONTAINER -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
+                        <div class="banner_content">
+                            <h2>BitCurrency <br> Lending & Investment Platform</h2>
+                            <p>Decentralized Consulting Platform for ICO Developers, Advisors, Crypto-Experts and
+                                Investors.</p>
+                            <div class="slider_btn">
+                                <a href="#about" class="btn btn-primary page-scroll">Read More</a>
+                                <a href="#footer" class="btn btn-default page-scroll">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END CONTAINER-->
+        </div>
+    </div>
+</section>
+<!-- END SECTION BANNER -->
+
+<!-- START PRICE LIST SECTION -->
+<section class="price_rate wave_bg">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="rate_list text-center">
+                    <div class="rate_content">
+                        <h3>XRP</h3>
+                        <p>Ripple</p>
+                        <ul class="currency_list">
+                            <li><span>USD</span>
+                                <p>1.322</p></li>
+                            <li><span>EUR</span>
+                                <p>1,065</p></li>
+                            <li><span>GBP</span>
+                                <p>0,936</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="rate_list text-center">
+                    <div class="rate_content">
+                        <h3>ETH</h3>
+                        <p>Ethereum</p>
+                        <ul class="currency_list">
+                            <li><span>USD</span>
+                                <p>1,197</p></li>
+                            <li><span>EUR</span>
+                                <p>965,0</p></li>
+                            <li><span>GBP</span>
+                                <p>848,3</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="rate_list text-center">
+                    <div class="rate_content">
+                        <h3>LTC</h3>
+                        <p>Litecoin</p>
+                        <ul class="currency_list">
+                            <li><span>USD</span>
+                                <p>182,6</p></li>
+                            <li><span>EUR</span>
+                                <p>147,2</p></li>
+                            <li><span>GBP</span>
+                                <p>129,4</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="rate_list text-center">
+                    <div class="rate_content">
+                        <h3>BTC</h3>
+                        <p>Bitcoin</p>
+                        <ul class="currency_list">
+                            <li><span>USD</span>
+                                <p>8195</p></li>
+                            <li><span>EUR</span>
+                                <p>6637</p></li>
+                            <li><span>GBP</span>
+                                <p>5884</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END PRICE LIST SECTION -->
+
+<!-- START ABOUT SECTION -->
+<section class="about" id="about">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="heading">
+                    <h2>About Bitcurrency</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam earum, provident ad, porro aperiam
+                    dolore, blanditiis, nihil pariatur eius adipisci consequuntur officiis. Excepturi, nostrum? Id
+                    incidunt nesciunt officia hic distinctio nihil pariatur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam earum, provident ad, porro aperiam
+                    dolore, blanditiis, nihil pariatur eius adipisci consequuntur officiis. Excepturi, nostrum? Id
+                    incidunt nesciunt officia hic distinctio nihil pariatur.</p>
+                <a href="#" class="btn btn-default">Read More</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="single_img">
+                    <img src="{% static 'assets/images/about_img.jpg' %}" alt="about_img"/>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END ABOUT SECTION -->
+
+<!-- START WHY CHOOSE SECTION -->
+<section class="gray_bg whychoose" id="whychoose">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center">
+                    <h2>Why Choose Bitcoin</h2>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim<br> id est laborum. Perspiciatis unde omnis iste natus error sit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="service_box text-center">
+                    <div class="service_icon">
+                        <img src="{% static 'assets/images/icon1.png' %}" alt="icon1"/>
+                    </div>
+                    <div class="service_text">
+                        <h4>Safe and Secure</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volupt dolorem dicta libero
+                            veritatis reiciendis quis pariatur magni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="service_box text-center">
+                    <div class="service_icon">
+                        <img src="{% static 'assets/images/icon2.png' %}" alt="icon2"/>
+                    </div>
+                    <div class="service_text">
+                        <h4>Experts Support</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volupt dolorem dicta libero
+                            veritatis reiciendis quis pariatur magni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="service_box text-center">
+                    <div class="service_icon">
+                        <img src="{% static 'assets/images/icon3.png' %}" alt="icon3"/>
+                    </div>
+                    <div class="service_text">
+                        <h4>Mobile Apps</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volupt dolorem dicta libero
+                            veritatis reiciendis quis pariatur magni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="service_box text-center">
+                    <div class="service_icon">
+                        <img src="{% static 'assets/images/icon4.png' %}" alt="icon4"/>
+                    </div>
+                    <div class="service_text">
+                        <h4>Instant Exchange</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volupt dolorem dicta libero
+                            veritatis reiciendis quis pariatur magni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="service_box text-center">
+                    <div class="service_icon">
+                        <img src="{% static 'assets/images/icon5.png' %}" alt="icon5"/>
+                    </div>
+                    <div class="service_text">
+                        <h4>Secure Wallet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volupt dolorem dicta libero
+                            veritatis reiciendis quis pariatur magni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="service_box text-center">
+                    <div class="service_icon">
+                        <img src="{% static 'assets/images/icon6.png' %}" alt="icon6"/>
+                    </div>
+                    <div class="service_text">
+                        <h4>Recuring Buys</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volupt dolorem dicta libero
+                            veritatis reiciendis quis pariatur magni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END WHY CHOOSE SECTION -->
+
+<!-- START LIVE PRICE CHART SECTION -->
+<section>
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center">
+                    <h2>BITCOIN LIVE PRICE</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="btcwdgt-chart btcwdgt btcwdgt-headlines btcwdgt-clean">
+                    <div class="btcwdgt-header"><h2 title="Bitcoin price"><span>$</span><span>53174.22</span></h2>
+                        <h4>BTC/USD</h4>
+                        <div class="stats">
+                            <div>MktCap<span class="mkt-cap">—.–</span></div>
+                            <div>High<span class="high">$63590.79</span></div>
+                            <div>Low<span class="low">$11753.44</span></div>
+                            <div>Supply<span class="supply">—.–</span></div>
+                            <div>Blocks<span class="blocks">—</span></div>
+                        </div>
+                        <p class="changes down"><strong class="arrow down"></strong><span class="pct">1.0%</span><span
+                                class="amt">$558.55</span></p>
+                        <p class="date-wrap"><span class="date">Apr 22, 2021 8:04 PM</span></p></div>
+                    <div class="btcwdgt-body" style="width: 640px !important;       height:360px !important">
+                        <canvas class="c" style="width: 640px; height: 360px;" width="640" height="360"></canvas>
+                        <canvas class="i" style="width: 640px; height: 360px;" width="640" height="360"></canvas>
+                    </div>
+                    <div class="btcwdgt-footer"><a
+                            href="https://www.bitcoin.com/widgets/?utm_source=&amp;utm_medium=widget&amp;utm_campaign=Chart%20Widget"
+                            class="embed" title="Embed this widget">&lt;/&gt;</a> <a
+                            href="https://www.bitcoin.com/?utm_source=&amp;utm_medium=widget&amp;utm_campaign=Chart%20Widget"
+                            class="logo" title="Powered by bitcoin.com"><span>bitcoin.com</span></a></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END LIVE PRICE CHART SECTION -->
+
+<!-- START COUNTER SECTION -->
+<section class="counter_wrap overlay background_bg"
+         style="background-image:url({% static 'assets/images/counter_bg.jpg' %});">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counter_box">
+                    <i class="fa fa-pie-chart"></i>
+                    <span class="counter">over $500 million </span>
+                    <h6>insured</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counter_box">
+                    <i class="fa fa-life-ring"></i>
+                    <span class="counter">over 120</span>
+                    <h6>Support Countries</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counter_box">
+                    <i class="fa fa-shield"></i>
+                    <span class="counter">more </span>
+                    <h6>easy and secure </h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counter_box">
+                    <i class="fa fa-users"></i>
+                    <span class="counter"> over 500,000</span>
+                    <h6>investors</h6>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END COUNTER SECTION -->
+
+<!-- START GET STARTED SECTION -->
+<section class="get_now_wrap">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center">
+                    <h2>Get Started Today</h2>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        <br>id est laborum. Perspiciatis unde omnis iste natus error sit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 no-padding">
+                <div class="get_start_box bg_color1 text-center">
+                    <i class="fa fa-download"></i>
+                    <h3>Download a Wallet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque
+                        facilis hic impedit.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 no-padding">
+                <div class="get_start_box bg_color2 text-center">
+                    <i class="fa fa-folder-open"></i>
+                    <h3>Add Bitcoin to a Wallet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque
+                        facilis hic impedit.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 no-padding">
+                <div class="get_start_box bg_color1 text-center">
+                    <i class="fa fa-refresh"></i>
+                    <h3>Send/Receive with Wallet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque
+                        facilis hic impedit.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END GET STARTED SECTION -->
+
+<!-- SRTAT VIDEO SECTION -->
+<section class="overlay background_bg" style="background-image:url({% static 'assets/images/video_bg.jpg' %});">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="video_box">
+                    <div class="heading text-center white">
+                        <h2>Video Review</h2>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim </p>
+                    </div>
+                    <a class="video" href="https://www.youtube.com/watch?v=GmOzih6I1zs"><i class="fa fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END VIDEO SECTION -->
+
+<!-- START TEAM SECTION -->
+<section id="team">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center">
+                    <h2>Our Core Team</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="team_slider owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                             style="transform: translate3d(-1170px, 0px, 0px); transition: all 0.25s ease 0s; width: 3510px;">
+                            <div class="owl-item cloned" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team3.jpg' %}"
+                                                             alt="team3"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team4.jpg' %}"
+                                                             alt="team4"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team1.jpg' %}"
+                                                             alt="team1"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team2.jpg' %}"
+                                                             alt="team2"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team3.jpg' %}"
+                                                             alt="team3"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team4.jpg' %}"
+                                                             alt="team4"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team1.jpg' %}"
+                                                             alt="team1"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 345px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="team_box text-center">
+                                        <div class="team_img">
+                                            <a href="#"><img src="{% static 'assets/images/team2.jpg' %}"
+                                                             alt="team2"></a>
+                                            <div class="team_social_wrap">
+                                                <ul class="team_social">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team_content">
+                                            <h3><a href="#">Maria Willium</a></h3>
+                                            <p>(Co-Founder &amp; CEO)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled">
+                        <div class="owl-prev">prev</div>
+                        <div class="owl-next">next</div>
+                    </div>
+                    <div class="owl-dots disabled">
+                        <div class="owl-dot active"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section><!-- START BLOG SECTION -->
+<section class="gray_bg" id="blog">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center">
+                    <h2>Latest News</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="blog_content owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                             style="transform: translate3d(-390px, 0px, 0px); transition: all 0.25s ease 0s; width: 1560px;">
+                            <div class="owl-item" style="width: 360px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="blog">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'assets/images/blog_img1.jpg' %}"
+                                                             alt="blog1"></a>
+                                            <div class="blog_date"><span class="date"><i class="fa fa-calendar-o"></i>January 28,2018</span>
+                                            </div>
+                                        </figure>
+                                        <div class="content_blog">
+                                            <h4><a href="#">But I must explain to you how all this mistaken idea</a>
+                                            </h4>
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old.</p>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 360px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="blog">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'assets/images/blog_img2.jpg' %}">
+                                            <div class="blog_date"><span class="date"><i class="fa fa-calendar-o"></i>January 28,2018</span>
+                                            </div>
+                                        </figure>
+                                        <div class="content_blog">
+                                            <h4><a href="#">But I must explain to you how all this mistaken idea</a>
+                                            </h4>
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old.</p>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 360px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="blog">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'assets/images/blog_img3.jpg' %}"
+                                                             alt="blog3"></a>
+                                            <div class="blog_date"><span class="date"><i class="fa fa-calendar-o"></i>January 28,2018</span>
+                                            </div>
+                                        </figure>
+                                        <div class="content_blog">
+                                            <h4><a href="#">But I must explain to you how all this mistaken idea</a>
+                                            </h4>
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old.</p>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 360px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="blog">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'assets/images/blog_img4.jpg' %}"
+                                                             alt="blog4"></a>
+                                            <div class="blog_date"><span class="date"><i class="fa fa-calendar-o"></i>January 28,2018</span>
+                                            </div>
+                                        </figure>
+                                        <div class="content_blog">
+                                            <h4><a href="#">But I must explain to you how all this mistaken idea</a>
+                                            </h4>
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old.</p>
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled">
+                        <div class="owl-prev">prev</div>
+                        <div class="owl-next">next</div>
+                    </div>
+                    <div class="owl-dots">
+                        <div class="owl-dot"><span></span></div>
+                        <div class="owl-dot active"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section><!-- END BLOG SECTION -->
+
+<!-- START PARTNER SECTION -->
+<section>
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center">
+                    <h2>Our Partner</h2>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        <br>id est laborum. Perspiciatis unde omnis iste natus error sit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="partner_slider owl-carousel owl-theme owl-loaded owl-drag">
+
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                             style="transform: translate3d(-1170px, 0px, 0px); transition: all 0.25s ease 0s; width: 3744px;">
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo2.png' %}"
+                                                         alt="partner_logo2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo3.png' %}"
+                                                         alt="partner_logo3"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo4.png' %}"
+                                                         alt="partner_logo4"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo5.png' %}"
+                                                         alt="partner_logo5"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo6.png' %}"
+                                                         alt="partner_logo6"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo1.png' %}"
+                                                         alt="partner_logo1"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo2.png' %}"
+                                                         alt="partner_logo2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo3.png' %}"
+                                                         alt="partner_logo3"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo4.png' %}"
+                                                         alt="partner_logo4"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo5.png' %}"
+                                                         alt="partner_logo5"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo6.png' %}"
+                                                         alt="partner_logo6"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo1.png' %}"
+                                                         alt="partner_logo1"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo2.png' %}"
+                                                         alt="partner_logo2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo3.png' %}"
+                                                         alt="partner_logo3"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo4.png' %}"
+                                                         alt="partner_logo4"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item cloned" style="width: 204px; margin-right: 30px;">
+                                <div class="item">
+                                    <div class="partner_logo">
+                                        <a href="#"><img src="{% static 'assets/images/partner_logo5.png' %}"
+                                                         alt="partner_logo5"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled">
+                        <div class="owl-prev">prev</div>
+                        <div class="owl-next">next</div>
+                    </div>
+                    <div class="owl-dots disabled"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END PARTNER SECTION -->
+
+<!-- START CONTACT FORM SECTION -->
+<section id="footer" class="overlay background_bg" style="background-image:url({% static 'assets/images/contact_bg.jpg' %});">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading text-center white">
+                    <h2>Contact us</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                <div class="contact_form">
+                    <form method="post" name="enq" class="form">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" required="required" placeholder="Name" id="first-name"
+                                       class="form-control" name="name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" required="required" placeholder="Email" id="email"
+                                       class="form-control" name="email">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" required="required" placeholder="Subject" id="subject"
+                                       class="form-control" name="subject">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea required="required" placeholder="Your Message" id="description"
+                                          class="form-control" name="message" rows="6"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="actions">
+                                    <input type="submit" title="Submit Your Message!" class="btn btn-default"
+                                           id="submitButton" name="submit" value="Send message">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="alert-msg" class="alert-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CONTACT FORM SECTION -->
+
+<!-- START FOOTER SECTION -->
+<footer>
+    <div class="top_footer">
+        <div class="container"><!-- STRART CONTAINER -->
+            <div class="row">
+                <div class="col-mg-4 col-md-4 col-sm-5 col-xs-12">
+                    <div class="footer_logo">
+                        <img src="{% static 'assets/images/logo.png' %}" alt="footer_logo"/>
+                    </div>
+                    <div class="site_info">
+                        <ul class="list_none">
+                            <li><i class="fa fa-map-marker"></i>
+                                <p>c/o Giunti International Division Via G.B. Pirelli, 30 20124</p></li>
+                            <li><i class="fa fa-phone"></i><a href="tel:123456789">(1234) 12345-678 </a></li>
+                            <li><i class="fa fa-envelope"></i><a
+                                    href="https://bestwebcreator.com/cdn-cgi/l/email-protection#85e6eaebf1e4e6f1c5fceaf0f7e8e4ece9abe6eae8"><span
+                                    class="__cf_email__" data-cfemail="72111d1c06131106320b1d07001f131b1e5c111d1f">[email&#160;protected]</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-mg-8 col-md-8 col-sm-7 col-xs-12">
+                    <div class="newsletter_content">
+                        <h3 class="footer_title">Newsletter</h3>
+                        <p>By subscribing to our mailing list you will always be update with the latest news from
+                            us.</p>
+                        <div class="newsletter_form">
+                            <form>
+                                <input type="email" required="required" placeholder="Enter Your Email"
+                                       class="form-control">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- END CONTAINER-->
+    </div>
+    <div class="bottom_footer">
+        <div class="container"><!-- STRART CONTAINER -->
+            <div class="row">
+                <div class="col-mg-6 col-md-6 col-sm-8 col-xs-12">
+                    <div class="copyright_text">
+                        <p>&copy; Copyright 2018 by BitCurrency. All Right Reserved </p>
+                    </div>
+                </div>
+                <div class="col-mg-6 col-md-6 col-sm-4 col-xs-12">
+                    <div class="social_footer list_none text-right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </Div>
+            </div>
+        </div><!-- END CONTAINER-->
+    </div>
+</footer>
+<!-- END FOOTER SECTION -->
+
+</body>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content %}
+<div class="wrapper">
+    {% include "side-bar.html" %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Advanced Form Elements
+                <small>Preview</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#">Forms</a></li>
+                <li class="active">Advanced Elements</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- SELECT2 EXAMPLE -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">deposit forms</h3>
+                </div>
+                <form action="{% url 'btc:deposit_view'%}" method="POST"> {% csrf_token %}
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="amount">amount</label>
+                                    {{ form.amount }}
+                                        {% include "messages.html" %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-btn">
+                        <hr>
+                        <div class="col">
+                            <button class="col btn btn-funky-moon">process</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and
+                    information about
+                    the plugin.
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 7.5
+        </div>
+        <strong>Copyright &copy; 2021 <a href="https://adminlte.io/">Paschaljet</a>.</strong> All rights
+        reserved.
+    </footer>
+
+
+</div>
+
+{% endblock %}

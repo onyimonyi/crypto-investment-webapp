@@ -1,0 +1,85 @@
+{% extends 'accountbase.html' %}
+
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<div class="login-area area-padding fix">
+    <div class="login-overlay"></div>
+    <div class="table">
+        <div class="table-cell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+                        <div class="login-form signup-form">
+                            <h4 class="login-title text-center">REGISTER</h4>
+                            <h4 class="login-title text-center" style="color: green;">GLOBAL CRYPTO COMPANY*</h4>
+                            <div class="row">
+                                <form id="contactForm" method="POST" action="{% url 'btc:register' %}"
+                                      class="log-form"> {% csrf_token %}
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="div_id_full_name">
+                                        <label for="id_full_name" class="control-label ">
+                                            Full name
+                                        </label>
+                                        <input type="text" id="id_full_name" name="full_name" class="form-control"
+                                               maxlength="255" placeholder="Username"
+                                               required="">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="div_id_email">
+                                        <label for="id_email" class="control-label requiredField">
+                                            Email<span class="asteriskField">*</span> </label>
+                                        <input type="email" name="email"
+                                               class="form-control" maxlength="255" required="" placeholder="email"
+                                               id="id_email">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="div_id_password1">
+                                        <label for="id_password1" class="control-label requiredField">
+                                            password<span class="asteriskField">*</span> </label>
+                                        <input type="password" name="password1" id="id_password1" class="form-control"
+                                               placeholder="Password" required="">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12" id="div_id_password2">
+                                        <label for="id_password2" class="control-label requiredField">
+                                            password confirmation<span class="asteriskField">*</span> </label>
+
+                                        <input type="password" id="id_password2" name="password2" class="form-control"
+                                               placeholder="Confirm Password" required="">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                        <div class="check-group flexbox">
+                                            <label class="check-box">
+                                                <input type="checkbox" class="check-box-input" checked>
+                                                <span class="remember-text">I agree terms & conditions</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                        <button type="submit" id="submit" class="slide-btn login-btn">Signup</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                        <div class="clear"></div>
+                                        <div class="separetor text-center"><span>Or signup with</span></div>
+                                        <div class="sign-icon">
+                                            <ul>
+                                                <li><a class="facebook" href="#"><i class="ti-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="ti-twitter"></i></a></li>
+                                                <li><a class="google" href="#"><i class="ti-google"></i></a></li>
+                                            </ul>
+                                            <div class="acc-not">have an account? <a
+                                                    href="{% url 'btc:login' %}">Login</a></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

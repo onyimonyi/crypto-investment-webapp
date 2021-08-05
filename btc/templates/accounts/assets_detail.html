@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    {% include "side-bar.html" %}
+    <div class="content-wrapper">
+        <div class="card-body">
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- DIRECT CHAT PRIMARY -->
+                        <div class="box box-primary direct-chat direct-chat-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title" style="color: 4B0082;">clear description</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <!-- Conversations are loaded here -->
+                                <section class="content">
+                                    <div class=" myboder">
+                                        <div
+                                                class="direct-chat-msg right">
+                                            <div class="direct-chat-info clearfix" style="color: 4B0082;">
+                                                <h1><span class="direct-chat-name pull-right"
+                                                          style="color: #d4af37;">{{ obj.name}}</span>
+                                                </h1>
+                                                <span class="direct-chat-timestamp pull-left"> <img
+                                                        class="direct-chat-img" src="{{obj.picture.url}}">
+                                                    <!-- /.direct-chat-img -->
+                                </span>
+                                            </div>
+                                            <!-- /.direct-chat-info -->
+                                            <div class=".card-body " style="color: 4B0082;">
+                                                {{ obj.description}}
+                                            </div>
+                                            <!-- /.direct-chat-text -->
+                                        </div>
+                                    </div>
+                                    <!-- /.direct-chat-msg -->
+                                    <form action="{% url 'btc:invested' obj.id  %}" method="POST">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="myboder2">
+                                                <div id="row-main-checkout-container">
+                                                    <div class="col-md-5 md-form mb-5">
+                                                        <label for="amount"
+                                                               style="color: 4B0082;">amount</label>
+                                                        {{ form.amount }}
+                                                        {% include "messages.html" %}
+                                                    </div>
+                                                    <div class="col-md-5 md-form mb-5">
+                                                        <label for="investment_durations" style="color: 4B0082;">investment_durations</label>
+                                                        {{ form.investment_durations }}
+                                                        {% include "messages.html" %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="my-btn text-center">
+                                                <hr>
+                                                <div class="col ">
+                                                    <button class="col btn btn-funky-moon">Invest</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                        <!--/.direct-chat -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}
